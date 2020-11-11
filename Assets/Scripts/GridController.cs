@@ -85,13 +85,15 @@ public class GridController : MonoBehaviour
                 //  Draw a cell grid position
                 if (displayGridPosition)
                 {
-                    Handles.color = Color.red;
                     string text = c.gridPos.x.ToString() + " " + c.gridPos.y.ToString();
                     Handles.Label(c.worldPos, text);
                 }
 
                 //  Draw a cell's integration cost 
-                if (displayIntegrationCost) { Handles.Label(c.worldPos, c.integrationCost.ToString()); }
+                if (displayIntegrationCost)
+                {
+                    Handles.Label(c.worldPos, c.integrationCost.ToString());
+                }
 
                 //  Draw flow field vector direction for this cell
                 Gizmos.color = Color.blue;
